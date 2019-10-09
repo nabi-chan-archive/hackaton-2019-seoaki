@@ -4,9 +4,7 @@ body {
   font-family: "NOTO SANS KR", sans-serif;
 }
 
-header {
-
-}
+header {}
 
 #chatBody {
   background-color: #f2f2f2;
@@ -74,6 +72,21 @@ header {
         word-break: keep-all;
       }
     }
+  }
+}
+
+#chat {
+  .chatContent {
+    display: inline-block;
+    outline: none;
+    border: solid 1px #ddd;
+    border-radius: 25px;
+    padding: 12px 24px;
+  }
+
+  .chatSubmit {
+    display: inline-block;
+    outline: none;
   }
 }
 

@@ -42,9 +42,10 @@
 
   <aside id="chat">
     <div class="container">
-      <form action="">
-        <input type="text" placeholder="내용을 입력해주세요." name="">
-        <input type="submit">
+      <form action="" method="post">
+        <input type="hidden" name="userId">
+        <input type="text" placeholder="내용을 입력해주세요." name="userContent" class="chatContent">
+        <input type="submit" value="보내기" class="chatSubmit">
       </form>
     </div>
   </aside>
