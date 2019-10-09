@@ -11,7 +11,7 @@ header {
 #chatBody {
   .BotChatBox {
     display: flex;
-    background-color: #a6772a;
+    padding: 24px 0;
 
     .profile {
       margin-right: 6px;
@@ -33,14 +33,23 @@ header {
       $border-radius : 15px;
       border-radius: 0 $border-radius $border-radius $border-radius;
 
+      span {
+        word-break: keep-all;
+      }
+
       .chatSetis {
         line-height: 100%;
         text-align: right;
-        
+
         a {
           font-size: .8em;
           color: #000;
           text-decoration: none;
+          transition: color .3s ease;
+
+          &:hover {
+            color: #888;
+          }
         }
       }
     }
