@@ -76,8 +76,26 @@ header {}
 }
 
 #chat {
+  .rollUp {
+    display: flex;
+    flex-direction: column;
+
+    .rollUpNav {
+      width: 100%;
+      height: 15px;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 0 0 6px 0 #000;
+    }
+
+    .navItems {
+      background-color: #fff;
+    }
+  }
+
+
   form {
     display: flex;
+    background-color: #fff;
   }
 
   .chatContent {
