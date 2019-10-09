@@ -9,7 +9,7 @@ header {
 }
 
 #chatBody {
-  .chatBox {
+  .BotChatBox {
     display: flex;
     background-color: #a6772a;
 
@@ -24,13 +24,25 @@ header {
     }
 
     .chat {
-      display: inline-block;
+      display: inline-flex;
+      flex-direction: column;
       margin-top: 24px;
-      background-color: #fff;
       padding: 15px 25px;
+      background-color: #fff;
       border: solid 1px #fff;
       $border-radius : 15px;
       border-radius: 0 $border-radius $border-radius $border-radius;
+
+      .chatSetis {
+        line-height: 100%;
+        text-align: right;
+        
+        a {
+          font-size: .8em;
+          color: #000;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
