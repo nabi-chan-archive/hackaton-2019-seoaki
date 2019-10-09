@@ -76,17 +76,33 @@ header {}
 }
 
 #chat {
+  form {
+    display: flex;
+  }
+
   .chatContent {
     display: inline-block;
+    margin: 0 12px;
+    width: 100%;
     outline: none;
     border: solid 1px #ddd;
     border-radius: 25px;
     padding: 12px 24px;
   }
 
-  .chatSubmit {
-    display: inline-block;
-    outline: none;
+  .button {
+      display: inline-block;
+      margin: 0;
+      padding: 12px;
+      border: none;
+      background-color: #f6d046;
+      border-radius: 50%;
+      outline: none;
+
+      span {
+        font-size: 1.1em;
+        color: #fff;
+      }
   }
 }
 
