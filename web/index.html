@@ -10,23 +10,25 @@
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container cp">
+      <h1>서아봇</h1>
 
+      <span class="fas fa-fw fa-redo-alt" onclick="" title="처음으로"></span>
     </div>
   </header>
 
   <section id="chatBody">
-    <div class="container">
+    <div class="container cp">
 
       <div class="botChatBox">
         <div class="profile">
-          <img src="https://placehold.it/250x250" alt="챗봇 프로필 이미지">
+          <img src="./img/user.jpg" alt="챗봇 프로필 이미지">
         </div>
         <div class="chat">
           <span>안녕하세요? 저는 챗봇이에요. 만나서 반갑습니다 :)</span>
           <div class="chatSetis">
-            <a href="#" class="far fa-thumbs-up fa-fw" title="챗봇의 답변이 마음에 들어요!"></a>
-            <a href="#" class="far fa-thumbs-down fa-fw" title="챗봇의 답변이 마음에 들지 않아요!"></a>
+            <span href="#" class="far fa-thumbs-up fa-fw" onclick="setis(1)" title="챗봇의 답변이 마음에 들어요!"></span>
+            <span href="#" onclick="unsetis(1)" class="far fa-thumbs-down fa-fw" title="챗봇의 답변이 마음에 들지 않아요!"></span>
           </div>
         </div>
       </div>
@@ -36,33 +38,57 @@
           봇아, 만나서 반가워!
         </div>
       </div>
-
+      
     </div>
   </section>
 
   <aside id="chat">
     <div class="container">
       <div class="rollUp">
-        <div class="rollUpNav"></div>
+        <div class="rollUpNav">
+          <div class="designBar"></div>
+        </div>
         <nav class="navItems">
-          <ul>
+          <ul class="resentItems itemsList">
             <li>1번 메뉴</li>
             <li>2번 메뉴</li>
             <li>3번 메뉴</li>
             <li>4번 메뉴</li>
             <li>5번 메뉴</li>
           </ul>
+          <div class="sublistContainer">
+            <ul class="subList itemsList">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+          </div>
         </nav>
       </div>
-      <form action="" method="post">
+      <form method="post" onsubmit="return sendMessage()">
         <input type="hidden" name="userId">
-        <button class="button showList">
+        <span class="button showList" title="하위 메뉴 보기">
           <span class="fas fa-arrow-up fa-fw"></span>
-        </button>
+        </span>
         <input type="text" placeholder="내용을 입력해주세요." name="userContent" class="chatContent">
-        <button type="submit" class="button chatSubmit"><span class="fas fa-paper-plane fa-fw"></span></button>
+        <button type="submit" class="button chatSubmit" title="메시지 보내기"><span class="fas fa-paper-plane fa-fw"></span></button>
       </form>
     </div>
   </aside>
+
+  <aside id="setisForm">
+    <div class="container">
+      <div class="background"></div>
+      <form onsubmit="return setisform()" method="post">
+        <input type="hidden" name="targetIdx">
+        <textarea placeholder="이곳에 내용을 입력해주세요." class="setisText" name="content" id="unsetisContent"></textarea>
+        <input type="submit" value="제출하기" class="setisSubmit">
+      </form>
+    </div>
+  </aside>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/index.js" charset="utf-8"></script>
 </body>
 </html>
