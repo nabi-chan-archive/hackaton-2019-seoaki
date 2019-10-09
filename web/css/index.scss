@@ -13,7 +13,7 @@ header {
 
   .BotChatBox {
     display: flex;
-    padding: 24px 0;
+    padding: 12px 0;
 
     .profile {
       margin-right: 12px;
@@ -31,8 +31,8 @@ header {
       margin-top: 24px;
       padding: 15px 25px;
       background-color: #fff;
-      border: solid 1px #fff;
-      $border-radius : 15px;
+
+      $border-radius: 15px;
       border-radius: 0 $border-radius $border-radius $border-radius;
 
       span {
@@ -44,10 +44,10 @@ header {
         text-align: right;
 
         a {
-          font-size: .8em;
+          font-size: 0.8em;
           color: #000;
           text-decoration: none;
-          transition: color .3s ease;
+          transition: color 0.3s ease;
 
           &:hover {
             color: #888;
