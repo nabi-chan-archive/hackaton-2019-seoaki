@@ -5,66 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-  <link rel="stylesheet" href="./css/index.min.css">
+  <link rel="stylesheet" href="static/css/index.min.css">
   <title>서아키</title>
 </head>
 <body>
   <header>
     <div class="container cp">
-      <h1>서아봇</h1>
+      <h1>서아키봇</h1>
 
-      <span class="fas fa-fw fa-redo-alt" onclick="" title="처음으로"></span>
+      <span class="fas fa-fw fa-redo-alt" onclick="reset()" title="처음으로"></span>
     </div>
   </header>
 
   <section id="chatBody">
     <div class="container cp">
 
-      <div class="botChatBox">
-        <div class="profile">
-          <img src="./img/user.jpg" alt="챗봇 프로필 이미지">
-        </div>
-        <div class="chat">
-          <span>안녕하세요? 저는 챗봇이에요. 만나서 반갑습니다 :)</span>
-          <div class="chatSetis">
-            <span href="#" class="far fa-thumbs-up fa-fw" onclick="setis(1)" title="챗봇의 답변이 마음에 들어요!"></span>
-            <span href="#" onclick="unsetis(1)" class="far fa-thumbs-down fa-fw" title="챗봇의 답변이 마음에 들지 않아요!"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="userChatBox">
-        <div class="chat">
-          봇아, 만나서 반가워!
-        </div>
-      </div>
-      
     </div>
   </section>
-
   <aside id="chat">
     <div class="container">
-      <div class="rollUp">
+        <div class="rollUp">
         <div class="rollUpNav">
           <div class="designBar"></div>
         </div>
         <nav class="navItems">
           <ul class="resentItems itemsList">
-            <li>1번 메뉴</li>
-            <li>2번 메뉴</li>
-            <li>3번 메뉴</li>
-            <li>4번 메뉴</li>
-            <li>5번 메뉴</li>
+            <li class="selectitems">건강검진</li>
+            <li class="selectitems">다자녀 혜택</li>
+            <li class="selectitems">예방접종</li>
+            <li class="selectitems">어린이집 지원</li>
+            <li class="selectitems">소고기</li>
           </ul>
-          <div class="sublistContainer">
-            <ul class="subList itemsList">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
         </nav>
       </div>
       <form method="post" onsubmit="return sendMessage()">
@@ -88,7 +59,11 @@
       </form>
     </div>
   </aside>
-  <script src="./js/jquery.js"></script>
-  <script src="./js/index.js" charset="utf-8"></script>
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/index.js" charset="utf-8"></script>
+
+    <script>
+        botchat('0', "안녕하세요, 서아키 챗봇입니다. <br> 육아, 보육 무엇이든지 물어보세요! <br><br> 만족도를 입력해주시면, 챗봇이 더 똑똑해 질거에요!");
+    </script>
 </body>
 </html>
