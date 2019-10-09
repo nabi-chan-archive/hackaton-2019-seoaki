@@ -56,6 +56,25 @@ header {
       }
     }
   }
+
+  .userChatBox {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 12px 0;
+
+    .chat {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #F6D046;
+
+      $border-radius: 15px;
+      border-radius: $border-radius 0 $border-radius $border-radius;
+
+      span {
+        word-break: keep-all;
+      }
+    }
+  }
 }
 
 .container {
